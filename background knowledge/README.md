@@ -4,7 +4,7 @@ The dataset generally used for 3D object detection is the KITTI benchmark, which
 
 Average orientation similarity is generally used as the evaluation metric for KITTI or Average Angular Error.
 They are given by,
-![image](/monocular-3D-object-detection/image.png)
+![image](image.png)
 
          
 
