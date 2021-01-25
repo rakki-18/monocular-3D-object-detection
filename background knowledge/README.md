@@ -8,16 +8,16 @@ They are given by,
 
          
 
-Egocentric orientation- relative to the camera.
+Egocentric orientation- relative to the camera.<br>
 Allocentric orientation- relative to the objects.
 
 High precision lidar(Light Detection and Ranging) point cloud is used for accurate 3D object detection. The paper PointNet showed how to manipulate the point cloud with neural networks.
 
 
 
-### Voxel Net paper (which uses lidar data) overview
+#### Voxel Net paper (which uses lidar data) overview
 
-Voxel partition divides the 3D space into equally spaced voxels. Then feature encoding layer transforms groups of points in each voxel into a 4D tensor.
+Voxel partition divides the 3D space into equally spaced voxels. Then feature encoding layer transforms groups of points in each voxel into a 4D tensor.<br>
 3D convolutional layer to the feature encoding layer aggregates voxel-wise features.
 Region Proposal Network produces a probability score map and a regression map.
 
@@ -37,29 +37,30 @@ In 3D RCNN, instead of finding the exact bin the target belongs to, a weighted a
 IoU score- it is the ratio of the intersection of produced output and the ground truth and the union of produced output and the ground truth.
 
 ### K-means clustering
-Clusters are homogeneous subgroups such that the elements in one cluster are very similar to all the other elements in the same cluster but very different from the elements in the other clusters.
-Algorithm: select random k centroids.
-	      Add all the data points to the closest cluster. ( expectation)
-	      From each cluster, evaluate the best centroid (maximization)
-	      Repeat until no change in the assignment of data points to any cluster.
+Clusters are homogeneous subgroups such that the elements in one cluster are very similar to all the other elements in the same cluster but very different from the elements in the other clusters.<br>
+Algorithm:<br>
+- select random k centroids.
+- Add all the data points to the closest cluster. ( expectation)
+- From each cluster, evaluate the best centroid (maximization)
+- Repeat until no change in the assignment of data points to any cluster.
 This follows the expectation-maximization method.
 
-### K-Nearest neighbor for 2D object detection.
+#### K-Nearest neighbor for 2D object detection.
 Matching an image with the k-nearest neighbors and selecting the top class from it.
 
-### Support-Vector Machines
+#### Support-Vector Machines
 Finding a hyperplane with the greatest possible margin between the hyperplane and any point, which will lead to the correct classification of the test data.
 Margin is the shortest distance between a point and a hyperplane.
 Keypoints are important points like the projection of the center of a 3D bbox or projection of a surface etc.
 
-Multi-task Learning
+#### Multi-task Learning
 Having a shared encoder to learn low-level features and task-specific decoders to predict the output. The total loss is a weighted loss of all the losses.
 
-### Mask R-CNN
+#### Mask R-CNN
 Used for instance segmentation.
-Instance segmentation integrates object detection tasks and semantic segmentation( classifying each pixel into a pre-defined category).
-Mask R-CNN is an extension of Faster R-CNN with an additional branch for predicting segmentation masks on each RoI. 
-RoI pool in Faster R-CNN is replaced by RoIAlign which preserves spatial information.
+Instance segmentation integrates object detection tasks and semantic segmentation( classifying each pixel into a pre-defined category).<br>
+Mask R-CNN is an extension of Faster R-CNN with an additional branch for predicting segmentation masks on each RoI. <br>
+RoI pool in Faster R-CNN is replaced by RoIAlign which preserves spatial information.<br>
 The output from RoIAlign is fed to 2 convolutional layers to generate a mask for each RoI.
 
 

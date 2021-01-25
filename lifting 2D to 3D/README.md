@@ -1,7 +1,7 @@
 ### Lifting 2D bounding boxes to 3D bounding boxes
 
-There are 4 degrees of freedom in 2D detection (center coordinates, length, and breadth).
-There are 7 degrees of freedom in 3D detection. (center coordinates, length, breadth, height, and yaw).
+There are 4 degrees of freedom in 2D detection (center coordinates, length, and breadth).<br>
+There are 7 degrees of freedom in 3D detection. (center coordinates, length, breadth, height, and yaw).<br>
 Detecting the 3D bbox from 2D is done by regressing the yaw angle and the center with the constraint that perspective projection of 3D should fit tightly into the 2D box.
 
 We can get 64 possible combinations of the 3D boxes from this method which fits into the 2D box. Among these 64, the best one can be selected by IoU score.
