@@ -3,6 +3,8 @@ CNN is still SOTA in 3D object detection but they do not scale well for 3D objec
 The dataset generally used for 3D object detection is the KITTI benchmark, which gives the global yaw and local yaw.
 
 Average orientation similarity is generally used as the evaluation metric for KITTI or Average Angular Error.
+They are given by,
+![image](/monocular-3D-object-detection/image.png)
 
          
 
